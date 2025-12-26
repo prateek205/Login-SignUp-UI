@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | AuthFlow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="auth-container">
+        <!-- Background Animation -->
+        <div class="background-animation">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        
+        <!-- Back to Home -->
+        <a href="index.html" class="back-home">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+        
+        <!-- Auth Card -->
+        <div class="auth-card signup-card">
+            <div class="auth-card-header">
+                <div class="auth-logo">
+                    <i class="fas fa-user-shield"></i>
+                    <span>Auth<span class="logo-highlight">Flow</span></span>
+                </div>
+                <h2>Create Account</h2>
+                <p>Join our community and get started today</p>
+            </div>
+            
+            <div class="auth-card-body">
+                <!-- Progress Steps -->
+                <div class="signup-progress">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <span class="step-label">Account</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <span class="step-label">Profile</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <span class="step-label">Complete</span>
+                    </div>
+                </div>
+                
+                <!-- Signup Forms -->
+                <form class="auth-form" id="signupForm">
+                    <!-- Step 1: Account Info -->
+                    <div class="form-step active" id="step1">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+                                <div class="input-feedback"></div>
+                            </div>
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signupEmail">Email Address</label>
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="signupEmail" name="email" placeholder="your@email.com" required>
+                                <div class="input-feedback"></div>
+                            </div>
+                            <div class="error-message" id="signupEmailError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="signupPassword" name="password" placeholder="Create a strong password" required>
+                                <button type="button" class="password-toggle" id="signupPasswordToggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <div class="input-feedback"></div>
+                            </div>
+                            <div class="password-strength">
+                                <div class="strength-bar">
+                                    <span class="strength-segment"></span>
+                                    <span class="strength-segment"></span>
+                                    <span class="strength-segment"></span>
+                                    <span class="strength-segment"></span>
+                                </div>
+                                <span class="strength-text">Password strength: <span id="strengthText">Weak</span></span>
+                            </div>
+                            <div class="error-message" id="signupPasswordError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <div class="input-group">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                                <button type="button" class="password-toggle" id="confirmPasswordToggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <div class="input-feedback"></div>
+                            </div>
+                            <div class="error-message" id="confirmPasswordError"></div>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-outline" id="skipToLogin">
+                                Already have an account?
+                            </button>
+                            <button type="button" class="btn btn-primary" id="nextStep1">
+                                Continue <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Profile Info -->
+                    <div class="form-step" id="step2">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <div class="input-group">
+                                <i class="fas fa-at"></i>
+                                <input type="text" id="username" name="username" placeholder="johndoe" required>
+                                <div class="input-feedback"></div>
+                            </div>
+                            <div class="error-message" id="usernameError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <div class="input-group">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                                <div class="input-feedback"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="birthdate">Date of Birth</label>
+                            <div class="input-group">
+                                <i class="fas fa-calendar"></i>
+                                <input type="date" id="birthdate" name="birthdate" required>
+                                <div class="input-feedback"></div>
+                            </div>
+                            <div class="error-message" id="birthdateError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Account Type</label>
+                            <div class="account-type">
+                                <div class="type-option">
+                                    <input type="radio" id="personal" name="accountType" value="personal" checked>
+                                    <label for="personal">
+                                        <i class="fas fa-user"></i>
+                                        <span>Personal</span>
+                                        <p>For individual use</p>
+                                    </label>
+                                </div>
+                                <div class="type-option">
+                                    <input type="radio" id="business" name="accountType" value="business">
+                                    <label for="business">
+                                        <i class="fas fa-briefcase"></i>
+                                        <span>Business</span>
+                                        <p>For teams and companies</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-outline" id="prevStep2">
+                                <i class="fas fa-arrow-left"></i> Back
+                            </button>
+                            <button type="button" class="btn btn-primary" id="nextStep2">
+                                Continue <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Terms & Complete -->
+                    <div class="form-step" id="step3">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        
+                        <h3>Almost Done!</h3>
+                        <p class="step-description">Review and accept our terms to complete your registration.</p>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">I agree to the <a href="#terms">Terms of Service</a> and <a href="#privacy">Privacy Policy</a></label>
+                            </div>
+                            <div class="error-message" id="termsError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                <label for="newsletter">Send me product updates, tips, and offers via email</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-outline" id="prevStep3">
+                                <i class="fas fa-arrow-left"></i> Back
+                            </button>
+                            <button type="submit" class="btn btn-primary" id="completeSignup">
+                                <span class="btn-text">Create Account</span>
+                                <div class="btn-loader">
+                                    <div class="loader"></div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                
+                <!-- Social Signup -->
+                <div class="divider">
+                    <span>Or sign up with</span>
+                </div>
+                
+                <div class="social-login">
+                    <button class="social-btn google">
+                        <i class="fab fa-google"></i>
+                        <span>Google</span>
+                    </button>
+                    <button class="social-btn github">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </button>
+                    <button class="social-btn twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </button>
+                </div>
+                
+                <!-- Login Link -->
+                <div class="auth-switch">
+                    <p>Already have an account? <a href="login.html" class="switch-link">Sign in here</a></p>
+                </div>
+            </div>
+            
+            <div class="auth-card-footer">
+                <p>By creating an account, you agree to our <a href="#terms">Terms of Service</a> and <a href="#privacy">Privacy Policy</a>.</p>
+            </div>
+        </div>
+        
+        <!-- Theme Toggle -->
+        <div class="theme-toggle-auth">
+            <button id="themeToggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        
+        <!-- Success Modal -->
+        <div class="modal" id="successModal">
+            <div class="modal-content success-modal">
+                <div class="modal-success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Account Created Successfully!</h3>
+                <p>Welcome to AuthFlow. Your account has been created and is ready to use.</p>
+                <div class="modal-buttons">
+                    <a href="login.html" class="btn btn-primary">Go to Login</a>
+                    <a href="index.html" class="btn btn-outline">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

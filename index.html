@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | AuthFlow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="landing-container">
+        <!-- Background Animation -->
+        <div class="background-animation">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="landing-nav">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <i class="fas fa-user-shield"></i>
+                    <span>Auth<span class="logo-highlight">Flow</span></span>
+                </a>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <div class="theme-toggle">
+                        <button id="themeToggle" class="theme-btn">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Secure Authentication <span class="text-gradient">Made Simple</span></h1>
+                    <p class="hero-subtitle">Experience seamless login and signup with our beautifully designed authentication system. Fast, secure, and user-friendly.</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h3>10K+</h3>
+                            <p>Active Users</p>
+                        </div>
+                        <div class="stat">
+                            <h3>99.9%</h3>
+                            <p>Uptime</p>
+                        </div>
+                        <div class="stat">
+                            <h3>256-bit</h3>
+                            <p>Encryption</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <a href="login.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-sign-in-alt"></i> Login Now
+                        </a>
+                        <a href="signup.html" class="btn btn-outline btn-lg">
+                            <i class="fas fa-user-plus"></i> Create Account
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="auth-card-preview">
+                        <div class="preview-card login-preview">
+                            <div class="preview-header">
+                                <h4>Welcome Back</h4>
+                                <p>Sign in to your account</p>
+                            </div>
+                            <div class="preview-form">
+                                <div class="preview-input">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>your@email.com</span>
+                                </div>
+                                <div class="preview-input">
+                                    <i class="fas fa-lock"></i>
+                                    <span>••••••••</span>
+                                </div>
+                                <div class="preview-button">
+                                    <span>Sign In</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="preview-card signup-preview">
+                            <div class="preview-header">
+                                <h4>Create Account</h4>
+                                <p>Join our community today</p>
+                            </div>
+                            <div class="preview-form">
+                                <div class="preview-input">
+                                    <i class="fas fa-user"></i>
+                                    <span>Full Name</span>
+                                </div>
+                                <div class="preview-input">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Email Address</span>
+                                </div>
+                                <div class="preview-button">
+                                    <span>Sign Up</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="features-section" id="features">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Choose <span class="text-gradient">AuthFlow</span></h2>
+                    <p class="section-subtitle">Our authentication system offers the best combination of security, convenience, and design.</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Military-Grade Security</h3>
+                        <p>End-to-end encryption and advanced security protocols to protect your data.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Lightning Fast</h3>
+                        <p>Optimized authentication process that works seamlessly across all devices.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Beautiful UI</h3>
+                        <p>Carefully designed interface with smooth animations and intuitive interactions.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Fully Responsive</h3>
+                        <p>Works perfectly on mobile, tablet, and desktop with adaptive layouts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="section-container">
+                <h2>Ready to Get Started?</h2>
+                <p>Join thousands of users who trust AuthFlow for their authentication needs.</p>
+                <div class="cta-buttons">
+                    <a href="signup.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-rocket"></i> Get Started Free
+                    </a>
+                    <a href="login.html" class="btn btn-outline btn-lg">
+                        <i class="fas fa-sign-in-alt"></i> Login to Account
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="landing-footer">
+            <div class="footer-container">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <a href="#" class="logo">
+                            <i class="fas fa-user-shield"></i>
+                            <span>Auth<span class="logo-highlight">Flow</span></span>
+                        </a>
+                        <p>Secure authentication with beautiful design. Made with <i class="fas fa-heart"></i> for developers.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Product</h4>
+                            <a href="#features">Features</a>
+                            <a href="#pricing">Pricing</a>
+                            <a href="#documentation">Documentation</a>
+                            <a href="#api">API</a>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Company</h4>
+                            <a href="#about">About Us</a>
+                            <a href="#blog">Blog</a>
+                            <a href="#careers">Careers</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Legal</h4>
+                            <a href="#privacy">Privacy Policy</a>
+                            <a href="#terms">Terms of Service</a>
+                            <a href="#cookies">Cookie Policy</a>
+                            <a href="#gdpr">GDPR</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2023 AuthFlow. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#privacy">Privacy</a>
+                        <a href="#terms">Terms</a>
+                        <a href="#sitemap">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
