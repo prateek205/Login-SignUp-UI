@@ -24,7 +24,7 @@ A modern and responsive **Login and Signup UI layout** built using **HTML, CSS, 
 - Basic error and success messages
 
 ## 📺 Live Demo
-URL: https://your-login-signup-ui.vercel.app
+URL: https://login-sign-up-ui-omega.vercel.app/
 
 
 ## 📁 Project Structure
